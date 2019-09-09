@@ -11,26 +11,25 @@
     <meta property="og:title" content="How To Use Font Awesome Icons In HTML" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://hyp-dev.github.io/test-rocket/" />
-    <meta property="og:image"
-        content="https://dummyimage.com/600x400/2753e6/fff" />
+    <meta property="og:image" content="https://dummyimage.com/600x400/2753e6/fff" />
     <meta property="og:description" content="A short description about the page content." />
     <meta property="og:site_name" content="Code Me Right" />
     <meta property="fb:app_id" content=" 515031449272930" />
 </head>
 
 <body>
-    
+
     <!-- Include the JavaScript SDK on your page once, ideally right after the opening body tag. -->
     <script>
-        var path_ass = 
-        window.fbAsyncInit = function () {
-            FB.init({
-                appId: ' 515031449272930',
-                xfbml: true,
-                version: 'v4.0'
-            });
-            FB.AppEvents.logPageView();
-        };
+        var path_ass =
+            window.fbAsyncInit = function () {
+                FB.init({
+                    appId: ' 515031449272930',
+                    xfbml: true,
+                    version: 'v4.0'
+                });
+                FB.AppEvents.logPageView();
+            };
         (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) {
@@ -38,7 +37,8 @@
             }
             js = d.createElement(s);
             js.id = id;
-            js.src = "https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0&appId=515031449272930&autoLogAppEvents=1";
+            js.src =
+                "https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0&appId=515031449272930&autoLogAppEvents=1";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
@@ -46,14 +46,27 @@
     <!-- Create a custom button with a unique id -->
     <!-- <a href=""></a> -->
 
-    
-    <a href="https://www.facebook.com/sharer.php?u=https://rocketmanquiz.com/es/&picture=https://dummyimage.com/600x400/2753e6/fff" id="shareBtn" target="_blank">Share</a>
+
+    <a href="https://www.facebook.com/sharer.php?u=https://rocketmanquiz.com/es/&picture=https://dummyimage.com/600x400/2753e6/fff"
+        id="shareBtn" target="_blank">Share</a>
 
     <!-- Call Share Dialog on the the above created custom button using button id -->
     <script>
         document.getElementById('shareBtn').onclick = function () {
             FB.ui({
- 
+                method: 'share_open_graph',
+                action_type: 'og.likes',
+                action_properties: JSON.stringify({
+                    object: {
+                        "og": {
+                            "url": 'https://rocketmanquiz.com/es/',
+                            "title": 'Rocket Manquiz',
+                            "image": {
+                                "url": 'https://dummyimage.com/600x400/2753e6/fff'
+                            }
+                        }
+                    }
+                })
             }, function (response) {});
         }
     </script>
