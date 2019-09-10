@@ -1,76 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <!-- <link rel="stylesheet" href="style.css" /> -->
-    <title>Test Rocket</title>
-    <meta property="og:title" content="How To Use Font Awesome Icons In HTML" />
-    <meta property="og:type" content="article" />
+    <title>Your Website Title</title>
+    <!-- You can use Open Graph tags to customize link previews.
+    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
     <meta property="og:url" content="https://hyp-dev.github.io/test-rocket/" />
-    <meta property="og:image" content="https://dummyimage.com/600x400/2753e6/fff" />
-    <meta property="og:description" content="A short description about the page content." />
-    <meta property="og:site_name" content="Code Me Right" />
-    <meta property="fb:app_id" content="2397578500318338" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Your Website Title" />
+    <meta property="og:description" content="Your description" />
+    <meta property="og:image" content="https://www.your-domain.com/path/image.jpg" />
+    <meta property="fb:app_id" content="2397578500318338">
 </head>
 
 <body>
 
-    <!-- Include the JavaScript SDK on your page once, ideally right after the opening body tag. -->
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
     <script>
-        var path_ass =
-            window.fbAsyncInit = function () {
-                FB.init({
-                    appId: '2397578500318338',
-                    xfbml: true,
-                    version: 'v4.0'
-                });
-                FB.AppEvents.logPageView();
-            };
         (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {
-                return;
-            }
+            if (d.getElementById(id)) return;
             js = d.createElement(s);
             js.id = id;
-            js.src =
-                "https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0&appId=2397578500318338&autoLogAppEvents=1";
+            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
 
-    <!-- Create a custom button with a unique id -->
-    <!-- <a href=""></a> -->
+    <!-- Your share button code -->
+    <div class="fb-share-button" data-href="https://www.your-domain.com/path/image.jpg" data-layout="button_count">
+    </div>
 
-
-    <a id="shareBtn" target="_blank">Share</a>
-
-    <!-- Call Share Dialog on the the above created custom button using button id -->
-    <script>
-        document.getElementById('shareBtn').onclick = function () {
-            FB.ui({
-                method: 'share_open_graph',
-                    action_type: 'og.shares',
-                    action_properties: JSON.stringify({
-                        object: {
-                            'og:url': 'https://rocketmanquiz.com/es/',
-                            'og:title': 'Patito',
-                            'og:description': 'Holi esto es un test',
-                            'og:image': 'https://www.apasionadosdelmarketing.es/wp-content/themes/seo-sem-ppc-marketing-internet-blog/images/sidebar-apasionados.jpgf',
-                            'og:image:width': 540,
-                            'og:image:height': 281
-                        }
-                    })
-                }, function (response) {
-                    // Action after response
-                })
-        
-        }
-    </script>
+    <img src="https://image.shutterstock.com/image-vector/baby-dummy-symbol-outline-icon-260nw-1454079512.jpg" alt="">
 
 </body>
 
