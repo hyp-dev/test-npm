@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/css/uikit.min.css" />
+    <title>UI Kit</title>
+</head>
+
+<body>
+
+    <style>
+        .container {
+            background-color: black;
+            /* height: 100vh; */
+
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        p {
+            color: blue;
+        }
+
+        .child {
+            background-color: pink;
+            height: 250px;
+            border: solid 1px;
+            margin: 1%;
+        }
+
+        /* .img-height{
+            height: 200px;
+        } */
+    </style>
+
+    <div class="container uk-width-1-1 uk-flex">
+        <div class="child uk-flex uk-width-1-2">
+            <div class="uk-card uk-card-default uk-width-1-2 uk-card-body ">
+                <h3 class="uk-card-title">Default</h3>
+                <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+            <div class="uk-width-1-2 uk-cover-container">
+                <div class="uk-text-center">
+                    <img src="https://getuikit.com/docs/images/light.jpg" alt="" class="img-responsive img-height">
+                    <p>CARD</p>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="child uk-width-1-2">
+            <p>HELLO 2</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit-icons.min.js"></script>
+</body>
+
+</html>
