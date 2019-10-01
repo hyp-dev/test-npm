@@ -1,0 +1,21 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.col-6.uno {
+    background-color: red;
+    height: 50px;
+}
+
+.row {
+    height: 50px;
+    margin: auto;
+}
+
+.col-6.dos {
+    background-color: rebeccapurple;
+    height: 50px;
+}
